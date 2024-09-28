@@ -116,7 +116,7 @@
 
     class F {
         constructor() {
-            this.scale = 0.08;
+            this.scale = 0.09;
             this.escape_clip = false;
         }
 
@@ -130,16 +130,24 @@
     // Create a MutationObserver to detect when SVGs are added to the DOM
     var observer = new MutationObserver(function(mutations) {
         // Check if all SVGs are injected
+        console.log('DOM Mutated: Checking for pending SVG injection');
         if (document.querySelectorAll("img.svg-injectable").length === 0) {
             observer.disconnect();
+            console.log('Finished injecting SVGs, applying MathJax');
             window.Svg_MathJax.install();
         }
     });
 
     // Ensure the DOM is fully loaded before setting up the observer
     document.addEventListener('DOMContentLoaded', function() {
-        // Start observing the document for added nodes
-        observer.observe(document.body, { childList: true, subtree: true });
+        if (document.querySelectorAll("img.svg-injectable").length === 0) {
+            console.log('No pending SVGs to inject, applying MathJax');
+            window.Svg_MathJax.install();
+        } else {
+            // Start observing the document for added nodes
+            console.log('Starting observer');
+            observer.observe(document.body, { childList: true, subtree: true });
+        }
     });
 
 })();
