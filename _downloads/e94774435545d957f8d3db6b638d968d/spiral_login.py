@@ -26,31 +26,22 @@ Academic Integrity Statement:
     submitting is my own original work.
 """
 
-from turtle import *
-
 """Import additional modules below this line (starting with unit 6)."""
-from math import cos, pi, sin, tau
+from turtle import *
 
 """Write new functions below this line (starting with unit 4)."""
 
 
 def start():
     """This function initializes the window and the turtle.
-    Do not modify this function.
+    Do not modify this function or any of the properties it sets.
     """
     setup(564, 564)
     width(5)
 
 
 def main():
-    # Draw six turns of the spiral
-    for degrees in range(0, 6 * 360 + 1):
-        # Calculate new x and y coordinates
-        radius = degrees / pi**2
-        radians = degrees * tau / 360
-        x, y = radius * cos(radians), radius * sin(radians)
-        goto(x, y)
-    """getcanvas().postscript(file='spiral_archimedean.eps')"""
+    """Write your mainline logic below this line (then delete this line)."""
 
 
 """Do not change anything below this line."""
