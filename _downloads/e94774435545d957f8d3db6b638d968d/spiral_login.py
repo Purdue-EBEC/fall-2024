@@ -1,13 +1,13 @@
 """
-Author: John Cole, jhcole@purdue.edu
-Assignment: 06.4 - Spiral
-Date: 09/27/2021
+Author: Your Name, login@purdue.edu
+Assignment: mm.n - Assignment Name
+Date: MM/DD/YYYY
 
 Description:
-    This program draws an Archimedean spiral pattern.
+    Describe your program here.
 
 Contributors:
-    None
+    Name, login@purdue.edu [repeat for each]
 
 My contributor(s) helped me:
     [ ] understand the assignment expectations without
